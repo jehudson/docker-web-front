@@ -30,6 +30,7 @@ ADD vocalissimo.org.conf /etc/apache2/sites-available/
 ADD notpavarotti.org.uk.conf /etc/apache2/sites-available/
 ADD linuxprofessionals.co.uk.conf /etc/apache2/sites-available/
 ADD vocalissimo.co.uk.conf /etc/apache2/sites-available/
+ADD jehudson.me.conf /etc/apache2/sites-available
 
 RUN a2ensite 000-default.conf
 RUN a2ensite gonad.org.uk.conf
@@ -38,6 +39,7 @@ RUN a2ensite vocalissimo.org.conf
 RUN a2ensite notpavarotti.org.uk.conf
 RUN a2ensite linuxprofessionals.co.uk.conf
 RUN a2ensite vocalissimo.co.uk.conf
+RUN a2ensite jehudson.me.conf
 
 # By default, simply start apache.
 CMD /usr/sbin/apache2ctl -D FOREGROUND
