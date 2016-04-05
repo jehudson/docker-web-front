@@ -1,0 +1,12 @@
+<VirtualHost *:80>
+  ServerAdmin john@gonad.org.uk
+  DocumentRoot /var/www/bigband.gonad
+  ServerName bigband.gonad.org.uk
+  <Directory /var/www/bigband.gonad/>
+      Require all granted
+  </Directory>
+
+  ErrorLog ${APACHE_LOG_DIR}/error.log
+  CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+</VirtualHost>
