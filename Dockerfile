@@ -44,6 +44,7 @@ RUN a2ensite linuxprofessionals.co.uk.conf
 RUN a2ensite vocalissimo.co.uk.conf
 RUN a2ensite jehudson.me.conf
 RUN a2ensite bigband.gonad.org.uk.conf
+RUN a2enmod proxy_http
 
 # By default, simply start apache.
 CMD /usr/sbin/apache2ctl -D FOREGROUND
